@@ -57,7 +57,7 @@ export function makeTimeline(ly: Lyrics, au: AudioData): TimelineEntry[] {
     E('open', 'open', 0, b.loss),
     E('loss', 'loss', b.loss, b.pre1),
     E('prompt1', 'prompt', b.pre1, b.hook1, { params: { variant: 'chatgpt' } }),
-    E('hook1', 'hook', b.hook1, b.room, { params: { n: 1 } }),
+    E('hook1', 'pixelfield', b.hook1, b.room, { params: { n: 1 } }),
     E('room', 'room', b.room, b.shog),
     // (its half-res G-buffer sparkles along the silhouettes from one sub-frame to the next: noise the adaptive
     // sampler would chase to 324 sub-frames, though 108 already can't be told from 324)
